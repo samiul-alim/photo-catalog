@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #e7e6e659;
+}
+
+/* Nav Bar */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #215a63;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #079ad9b3;
+}
+
+.active {
+  background-color: #079ad9;
+}
+
+/* Homepage */
+
+.container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.radio-tile-group {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.radio-tile-group .input-container {
+  position: relative;
+  height: 7rem;
+  width: 18rem;
+  margin: 0.5rem;
+}
+
+.radio-tile-group .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-tile-group .input-container .radio-tile {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #079ad9;
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.radio-tile-group .input-container .icon svg {
+  fill: #079ad9;
+  width: 3rem;
+  height: 3rem;
+}
+
+.radio-tile-group .input-container .radio-button:checked+.radio-tile .icon svg path {
+  fill: white;
+}
+
+.radio-tile-group .input-container .radio-button:checked+.radio-tile .icon svg circle {
+  fill: white;
+}
+
+.radio-tile-group .input-container .radio-tile-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #079ad9;
+}
+
+.radio-tile-group .input-container .radio-button:checked+.radio-tile {
+  background-color: #079ad9;
+  border: 2px solid #079ad9;
+  color: white;
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.radio-tile-group .input-container .radio-button:checked+.radio-tile .icon svg {
+  fill: white;
+  background-color: #079ad9;
+}
+
+.radio-tile-group .input-container .radio-button:checked+.radio-tile .radio-tile-label {
+  color: white;
+  background-color: #079ad9;
+}
+
+@media only screen and (max-width: 600px) {
+  .radio-tile-group .input-container {
+    width: 16rem;
+  }
+  .form-container {
+    width: 100% !important;
+  }
+  .u-content {
+    margin: 0em !important;
+  }
+}
+
+/* Photo upload */
+
+.btn-file>input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 23px;
+  height: 100%;
+  width: 100%;
+  direction: ltr;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+.photo-upload__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: #F4F9F9;
+  border: 2px dashed #CCDCE2;
+  z-index: 1;
+  position: relative;
+}
+
+.photo-upload__btn .ni-picture-o {
+  color: #CCDCE2;
+  font-size: 75px;
+  margin: 0;
+  position: relative;
+  z-index: -1;
+}
+
+.photo-upload__btn h3 {
+  color: #28626B;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  z-index: -1;
+}
+
+.photo-upload__btn h5 {
+  color: #626262;
+  font-size: 11px;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: calc(50% - 90px);
+  font-weight: normal;
+}
+
+/* Upload page */
+
+.u-content {
+  margin: 4em 25em;
+  display: block;
+  background: #ffffff;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .4);
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 40%;
+}
+
+/* Form */
+
+.u-content .group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.u-content input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  border-radius: 6px;
+}
+
+.u-content input:focus {
+  outline: none;
+}
+
+.u-content label {
+  color: #c1c1c1;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.u-content input:focus~label, .u-content input:valid~label {
+  top: -20px;
+  font-size: 14px;
+  color: #28626B;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #28626B;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+input:focus~.bar:before, input:focus~.bar:after {
+  width: 50%;
+}
+
+/* Button */
+
+.button2, .btn-secondary2 {
+  cursor: pointer;
+  padding: 17px 35px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Roboto Mono, Courier New, Courier, monospace!important;
+  line-height: 1;
+  color: #ffffff;
+  border-radius: 4px;
+  background: #28626B;
+  background-size: 1100%;
+  border: none;
+  position: relative;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  transition: background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);
+  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955);
+  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275)
+}
+
+.button2 {
+  margin: 30px 0;
+  transition: bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);
+  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955);
+  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275)
+}
+
+.button2, .button2 .btn-secondary2 {
+  background-position: 0 50%;
+  bottom: 0
+}
+
+.button2 .btn-secondary2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  -webkit-filter: blur(16px);
+  filter: blur(16px);
+  opacity: .9;
+  -webkit-transform: scale3d(.9, .9, 1);
+  transform: scale3d(.9, .9, 1);
+  transition: bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275), -webkit-filter .3s cubic-bezier(.175, .885, .32, 1.275);
+  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), filter .3s cubic-bezier(.175, .885, .32, 1.275), bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955);
+  transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), filter .3s cubic-bezier(.175, .885, .32, 1.275), bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275), -webkit-filter .3s cubic-bezier(.175, .885, .32, 1.275)
+}
+
+.button2:focus, .button2:hover {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+  background-position: 100% 50%;
+  outline: none;
+  bottom: 2px
+}
+
+.button2:focus .btn-secondary2, .button2:hover .btn-secondary2 {
+  background-position: 100% 50%;
+  bottom: -5px;
+  -webkit-filter: blur(25px);
+  filter: blur(25px)
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
