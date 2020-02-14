@@ -7,7 +7,7 @@ import { Home, Upload, Catalog } from './'
 const App = ({ router }) => {
   return (
     <div>
-      <header>
+      <header className="nav">
         <ul>
           <li className={router.location.pathname === ROUTES.ROOT ? 'active' : ''}><Link to={ROUTES.ROOT}>Home</Link></li>
           <li className={router.location.pathname === ROUTES.UPLOAD ? 'active' : ''}><Link to={ROUTES.UPLOAD}>Upload</Link></li>

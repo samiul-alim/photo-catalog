@@ -9,7 +9,7 @@ body {
 
 /* Nav Bar */
 
-ul {
+.nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -17,11 +17,11 @@ ul {
   background-color: #215a63;
 }
 
-li {
+.nav li {
   float: left;
 }
 
-li a {
+.nav li a {
   display: block;
   color: white;
   text-align: center;
@@ -29,11 +29,11 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.nav li a:hover:not(.active) {
   background-color: #079ad9b3;
 }
 
-.active {
+.nav .active {
   background-color: #079ad9;
 }
 
@@ -246,69 +246,6 @@ input[type="file"] {
   margin-bottom: 45px;
 }
 
-.u-content input {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #e6e6e6;
-  border-radius: 6px;
-}
-
-.u-content input:focus {
-  outline: none;
-}
-
-.u-content label {
-  color: #c1c1c1;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-.u-content input:focus~label, .u-content input:valid~label {
-  top: -20px;
-  font-size: 14px;
-  color: #28626B;
-}
-
-.bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-.bar:before, .bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  position: absolute;
-  background: #28626B;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-.bar:before {
-  left: 50%;
-}
-
-.bar:after {
-  right: 50%;
-}
-
-input:focus~.bar:before, input:focus~.bar:after {
-  width: 50%;
-}
-
 /* Button */
 
 .button2, .btn-secondary2 {
@@ -378,4 +315,12 @@ input:focus~.bar:before, input:focus~.bar:after {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #215a63 !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: #28626B !important;
 }
