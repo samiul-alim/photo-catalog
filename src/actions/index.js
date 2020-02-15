@@ -1,3 +1,3 @@
-import { gotoRoute } from './photoAction';
+import { gotoRoute, addPhotoToCatalog, deletePhoto } from './photoAction';
 
-export { gotoRoute }
+export { gotoRoute, addPhotoToCatalog, deletePhoto }

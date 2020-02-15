@@ -6,6 +6,7 @@ import store, { history } from './store'
 import App from './components/app'
 
 import './index.css'
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const target = document.querySelector('#root')
 

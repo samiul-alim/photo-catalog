@@ -147,6 +147,16 @@ body {
   .u-content {
     margin: 0em !important;
   }
+  .ReactGridGallery_tile-viewport img {
+    max-width: 300px;
+  }
+  .home-card-container {
+    margin-top: 10px !important;
+    padding: 0 0px !important;
+  }
+  .home-page-container {
+    height: 60vh !important;
+  }
 }
 
 /* Photo upload */
@@ -211,7 +221,6 @@ input[type="file"] {
 .photo-upload__btn h5 {
   color: #626262;
   font-size: 11px;
-  position: absolute;
   z-index: -1;
   bottom: 0;
   left: calc(50% - 90px);
@@ -227,6 +236,8 @@ input[type="file"] {
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .4);
   border-radius: 10px;
   padding: 2em;
+  min-height: 600px;
+  overflow: auto;
 }
 
 .centered-container {
@@ -323,4 +334,62 @@ input[type="file"] {
 
 .MuiInput-underline:after {
   border-bottom: #28626B !important;
+}
+
+.error-msg-block {
+  text-align: center;
+  color: #ff0000fa;
+}
+
+.gallery-image-title {}
+
+.gallery-image-date {
+  margin-left: 30px;
+  float: right;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.gallery-image-location {
+  margin-left: 30px;
+  float: right;
+  font-weight: 800;
+}
+
+.ReactGridGallery_tile-icon-bar {
+  /* display: none; */
+}
+
+.catalog-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.ReactGridGallery_tile {
+  padding: 8px !important;
+}
+
+.pca-label {
+  color: #28626B;
+}
+
+.photo-delete-btn {
+  float: right;
+  margin: 0 0 10px 0;
+}
+
+.home-card-container {
+  margin-top: 40px;
+  padding: 0 200px;
+}
+
+.home-card {
+  border: 2px #28626b54 dotted;
+  box-shadow: 0 0 !important;
+}
+
+.home-page-container {
+  height: 70vh;
 }
