@@ -2,6 +2,7 @@
   "name": "photo-catalog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://memories-photo-catalog.firebaseapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
