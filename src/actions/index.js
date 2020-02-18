@@ -1,3 +1,3 @@
-import { gotoRoute, addPhotoToCatalog, deletePhoto } from './photoAction';
+import { appInit, gotoRoute, addPhotoToCatalog, deletePhoto } from './photoAction';
 
-export { gotoRoute, addPhotoToCatalog, deletePhoto }
+export { appInit, gotoRoute, addPhotoToCatalog, deletePhoto }

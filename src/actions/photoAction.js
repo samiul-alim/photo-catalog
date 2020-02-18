@@ -2,7 +2,13 @@ import actionType from "./actionTypes"
 import { push } from "connected-react-router"
 import ROUTES from '../utils/routes';
 import { toast } from 'react-toastify';
-toast.configure({});
+
+export const appInit = (payload) => {
+  toast.configure({});
+  return dispatch => {
+    dispatch({ type: actionType.INIT, payload });
+  }
+}
 
 export const gotoRoute = (payload) => {
   return dispatch => {

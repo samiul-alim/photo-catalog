@@ -67,7 +67,7 @@ class Catalog extends Component {
       caption: <React.Fragment>
         <span className="gallery-image-title">{photo.title}</span>
         <span className="gallery-image-location">{photo.location}</span>
-        <span className="gallery-image-date">{photo.date.toISOString().slice(0, 10)}</span>
+        <span className="gallery-image-date">{photo.date}</span>
       </React.Fragment>,
       isSelected: photo.isSelected,
       alt: 'Image not found!'

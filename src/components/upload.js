@@ -80,7 +80,7 @@ class Upload extends Component {
         <div className="centered-container" style={{ marginTop: '60px' }}>
           <div className="photo-upload__btn btn-file">
             <input type="file" accept="image/png, image/jpeg" onChange={this.onImageLoad} />
-            {form.photo && <img height="auto" width="100%" src={form.photo} />}
+            {form.photo && <img height="auto" width="100%" src={form.photo} alt='' />}
             {!form.photo &&
               <React.Fragment>
                 <h3>Upload Photo</h3>
@@ -137,7 +137,7 @@ class Upload extends Component {
   }
 }
 
-const mapStateToProps = ({ }) => ({
+const mapStateToProps = () => ({
 })
 
 const mapDispatchToProps = dispatch =>
